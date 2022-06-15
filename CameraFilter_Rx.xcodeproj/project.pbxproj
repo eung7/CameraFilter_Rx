@@ -10,6 +10,7 @@
 		E5CE7F712859E2BB00120611 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CE7F702859E2BB00120611 /* PhotosCollectionViewController.swift */; };
 		E5CE7F742859E2DE00120611 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E5CE7F732859E2DE00120611 /* RxCocoa */; };
 		E5CE7F762859E2DE00120611 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E5CE7F752859E2DE00120611 /* RxSwift */; };
+		E5CE7F782859ED8B00120611 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CE7F772859ED8B00120611 /* PhotoCollectionViewCell.swift */; };
 		E5FBC5602859DB7A001C4E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBC55F2859DB7A001C4E1E /* AppDelegate.swift */; };
 		E5FBC5622859DB7A001C4E1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBC5612859DB7A001C4E1E /* SceneDelegate.swift */; };
 		E5FBC5642859DB7A001C4E1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBC5632859DB7A001C4E1E /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		E5CE7F702859E2BB00120611 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		E5CE7F772859ED8B00120611 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5FBC55C2859DB7A001C4E1E /* CameraFilter_Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraFilter_Rx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FBC55F2859DB7A001C4E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5FBC5612859DB7A001C4E1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				E5FBC5612859DB7A001C4E1E /* SceneDelegate.swift */,
 				E5FBC5632859DB7A001C4E1E /* ViewController.swift */,
 				E5CE7F702859E2BB00120611 /* PhotosCollectionViewController.swift */,
+				E5CE7F772859ED8B00120611 /* PhotoCollectionViewCell.swift */,
 				E5FBC5652859DB7A001C4E1E /* Main.storyboard */,
 				E5FBC5682859DB7B001C4E1E /* Assets.xcassets */,
 				E5FBC56A2859DB7B001C4E1E /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5FBC5642859DB7A001C4E1E /* ViewController.swift in Sources */,
+				E5CE7F782859ED8B00120611 /* PhotoCollectionViewCell.swift in Sources */,
 				E5FBC5602859DB7A001C4E1E /* AppDelegate.swift in Sources */,
 				E5FBC5622859DB7A001C4E1E /* SceneDelegate.swift in Sources */,
 				E5CE7F712859E2BB00120611 /* PhotosCollectionViewController.swift in Sources */,
