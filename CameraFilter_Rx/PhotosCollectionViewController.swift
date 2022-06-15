@@ -6,9 +6,22 @@
 //
 
 import UIKit
+import Photos
 import RxCocoa
 import RxSwift
 
 class PhotosCollectionViewController: UICollectionViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        populatePhotos()
+    }
     
+    func populatePhotos() {
+        PHPhotoLibrary.requestAuthorization(for: .readWrite, handler: { status in
+            if status == .authorized {
+                // access the photos from photo library
+            }
+        })
+    }
 }
+
