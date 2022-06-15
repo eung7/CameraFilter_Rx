@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5CE7F712859E2BB00120611 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CE7F702859E2BB00120611 /* PhotosCollectionViewController.swift */; };
+		E5CE7F742859E2DE00120611 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = E5CE7F732859E2DE00120611 /* RxCocoa */; };
+		E5CE7F762859E2DE00120611 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E5CE7F752859E2DE00120611 /* RxSwift */; };
 		E5FBC5602859DB7A001C4E1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBC55F2859DB7A001C4E1E /* AppDelegate.swift */; };
 		E5FBC5622859DB7A001C4E1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBC5612859DB7A001C4E1E /* SceneDelegate.swift */; };
 		E5FBC5642859DB7A001C4E1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FBC5632859DB7A001C4E1E /* ViewController.swift */; };
@@ -16,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5CE7F702859E2BB00120611 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		E5FBC55C2859DB7A001C4E1E /* CameraFilter_Rx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraFilter_Rx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FBC55F2859DB7A001C4E1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5FBC5612859DB7A001C4E1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,6 +35,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5CE7F762859E2DE00120611 /* RxSwift in Frameworks */,
+				E5CE7F742859E2DE00120611 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +65,7 @@
 				E5FBC55F2859DB7A001C4E1E /* AppDelegate.swift */,
 				E5FBC5612859DB7A001C4E1E /* SceneDelegate.swift */,
 				E5FBC5632859DB7A001C4E1E /* ViewController.swift */,
+				E5CE7F702859E2BB00120611 /* PhotosCollectionViewController.swift */,
 				E5FBC5652859DB7A001C4E1E /* Main.storyboard */,
 				E5FBC5682859DB7B001C4E1E /* Assets.xcassets */,
 				E5FBC56A2859DB7B001C4E1E /* LaunchScreen.storyboard */,
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = CameraFilter_Rx;
+			packageProductDependencies = (
+				E5CE7F732859E2DE00120611 /* RxCocoa */,
+				E5CE7F752859E2DE00120611 /* RxSwift */,
+			);
 			productName = CameraFilter_Rx;
 			productReference = E5FBC55C2859DB7A001C4E1E /* CameraFilter_Rx.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = E5FBC5532859DB7A001C4E1E;
+			packageReferences = (
+				E5CE7F722859E2DE00120611 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = E5FBC55D2859DB7A001C4E1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +155,7 @@
 				E5FBC5642859DB7A001C4E1E /* ViewController.swift in Sources */,
 				E5FBC5602859DB7A001C4E1E /* AppDelegate.swift in Sources */,
 				E5FBC5622859DB7A001C4E1E /* SceneDelegate.swift in Sources */,
+				E5CE7F712859E2BB00120611 /* PhotosCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +373,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E5CE7F722859E2DE00120611 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E5CE7F732859E2DE00120611 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5CE7F722859E2DE00120611 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		E5CE7F752859E2DE00120611 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E5CE7F722859E2DE00120611 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E5FBC5542859DB7A001C4E1E /* Project object */;
 }
