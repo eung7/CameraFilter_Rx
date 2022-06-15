@@ -11,6 +11,7 @@ import RxSwift
 class ViewController: UIViewController {
     // MARK: - Properties
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var applyFilterButton: UIButton!
     let disposeBag = DisposeBag()
 
     // MARK: - Life Cycle
@@ -23,9 +24,23 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let navC = segue.destination as? UINavigationController,
               let photosCVC = navC.viewControllers.first as? PhotosCollectionViewController else { return }
-        photosCVC.selectedPhoto.subscribe(onNext: { [weak self] photo in
-            self?.photoImageView.image = photo
+        photosCVC.selectedPhotoSubject.subscribe(onNext: { [weak self] photo in
+            self?.updateUI(with: photo)
         }).disposed(by: disposeBag)
+    }
+    
+    @IBAction func applyFilterButtonPressed() {
+        guard let sourceImage = self.photoImageView.image else { return }
+        FilterService().applyFilter(to: sourceImage) { filteredImage in
+            DispatchQueue.main.async {
+                self.photoImageView.image = filteredImage
+            }
+        }
+    }
+    
+    private func updateUI(with image: UIImage) {
+        photoImageView.image = image
+        applyFilterButton.isHidden = false
     }
 }
 

@@ -13,12 +13,9 @@ import RxSwift
 class PhotosCollectionViewController: UICollectionViewController {
     // MARK: - States
     var images = [PHAsset]()
-    var selectedPhoto: Observable<UIImage> {
-        return selectedPhotoSubject.asObservable()
-    }
     
     // MARK: - Properties
-    private let selectedPhotoSubject = PublishSubject<UIImage>()
+    let selectedPhotoSubject = PublishSubject<UIImage>()
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
