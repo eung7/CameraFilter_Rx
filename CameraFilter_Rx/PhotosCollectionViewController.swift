@@ -11,19 +11,42 @@ import RxCocoa
 import RxSwift
 
 class PhotosCollectionViewController: UICollectionViewController {
+    // MARK: - States
     var images = [PHAsset]()
+    var selectedPhoto: Observable<UIImage> {
+        return selectedPhotoSubject.asObservable()
+    }
     
+    // MARK: - Properties
+    private let selectedPhotoSubject = PublishSubject<UIImage>()
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         populatePhotos()
     }
-    
+
+    // MARK: - Helpers
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedAsset = images[indexPath.row]
+        PHImageManager.default().requestImage(for: selectedAsset, targetSize: CGSize(width: 300, height: 300), contentMode: .aspectFit, options: nil) { [weak self] image, info in
+            guard let info = info else { return }
+            let isDegradedImage = info["PHImageResultIsDegradedKey"] as! Bool
+            if !isDegradedImage {
+                if let image = image {
+                    self?.selectedPhotoSubject.onNext(image)
+                    self?.dismiss(animated: true)
+                }
+            }
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
