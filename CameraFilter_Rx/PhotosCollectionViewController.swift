@@ -25,7 +25,7 @@ class PhotosCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         populatePhotos()
     }
-
+    
     // MARK: - Helpers
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
